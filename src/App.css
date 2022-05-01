@@ -10,14 +10,14 @@
   place-items: center;
 }
 .container{
-  min-width: 800px;
-  max-width: 80%;
+  min-width: 50vw;
   /* background-color:teal; */
   margin-top: 5%;
 }
 .drugs{
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 button{
   border: none;
@@ -28,10 +28,39 @@ button{
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  width: 50%;
 }
 .drug1{
   background-color:crimson;
 }
 .drug2{
   background-color: teal;
+}
+.form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input, select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.input-unit{
+  display: flex;
+  align-items: center;
+  /* gap: 20px; */
+
+}
+.unit{
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+h1{
+  text-align: center;
 }
