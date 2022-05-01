@@ -3,3 +3,35 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+.App{
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.container{
+  min-width: 800px;
+  max-width: 80%;
+  /* background-color:teal; */
+  margin-top: 5%;
+}
+.drugs{
+  display: flex;
+  justify-content: space-around;
+}
+button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.drug1{
+  background-color:crimson;
+}
+.drug2{
+  background-color: teal;
+}
