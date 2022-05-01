@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import drugData from './drug-data.json';
 import './App.css';
 
-const Input = ({ type, items, unit }) => {
+const Input = ({ type, items, unit, isRequired }) => {
   if (type === 'dropdown')
     return (
-      <select>
+      <select required={isRequired}>
         {items.map(({ value, text }) => (
           <option key={value} value={value}>
             {text}
@@ -17,12 +17,12 @@ const Input = ({ type, items, unit }) => {
   if (unit)
     return (
       <div className="input-unit">
-        <input type={type} />
+        <input type={type} required={isRequired} />
         <p className="unit">{unit}</p>
       </div>
     );
 
-  return <input type={type} />;
+  return <input type={type} required={isRequired} />;
 };
 
 const App = () => {
@@ -45,7 +45,6 @@ const App = () => {
           </button>
         </div>
         <form className="form">
-          {console.log(formData)}
           {formData ? (
             formData.map((data) => (
               <div key={data.label}>
@@ -57,6 +56,7 @@ const App = () => {
           ) : (
             <h1>Order Something...</h1>
           )}
+          {formData && <input type="submit" value="Submit Form" />}
         </form>
       </div>
     </div>
